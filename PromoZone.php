@@ -4,7 +4,7 @@ require_once('context/shared/Response.php');
 
 class PromoZone {
 
-    private $API_URL = "https://api.promo-zone.com.mx/v1/establecimientos/";
+    private $API_URL = "https://my-other-api.com.mx/v1/establecimientos/";
     private $response;
 
     public function __construct() {
