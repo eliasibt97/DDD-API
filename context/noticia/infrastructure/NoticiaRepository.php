@@ -20,8 +20,8 @@ class NoticiaRepository implements NoticiaRepositoryInterface
 		$query = $this->db->db_connect->prepare("SELECT
 			c.NombreCampania AS nombre, c.FechaInicioEnvio AS fechaInicio, c.PuntosPorClick as puntos, c.Asunto as asunto,
 			CASE WHEN ic.RutaImagen IS NULL OR ic.RutaImagen = ''
-			THEN CONCAT('https://tusprivilegios.com/RETAIL/GARAGE290/imagenes/default.png')
-			ELSE CONCAT('https://tusprivilegios.com/AGENCIA/GARAGE290/SUCURSAL/', REPLACE(ic.RutaImagen, '../',''))
+			THEN CONCAT('https://www.midominio.com.mx/images/default.png')
+			ELSE CONCAT('https://www.midominio.com.mx/images/', REPLACE(ic.RutaImagen, '../',''))
 			END AS logotipo
 			FROM campania c
 			INNER JOIN imagencampania ic ON ic.IdCampania = c.IdCampania
