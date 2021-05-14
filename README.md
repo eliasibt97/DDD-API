@@ -4,4 +4,4 @@
 
 Primer versión funcionando en producción.
 
-Desarrollador por ELIASIB TORIZ (eliasibt97@gmailcom)
+Desarrollador por ELIASIB TORIZ (eliasibt97@gmail.com)
