@@ -3,8 +3,8 @@
 class DBConfig extends PDO {
     public $db_connect;
     private $db_host = 'localhost';
-    private $db_name = 'garage290';
-    private $db_user = 'garage290db';
+    private $db_name = 'homestead';
+    private $db_user = 'root';
     private $db_pass = 'B45eTpR1';
 
     public function __construct(){
