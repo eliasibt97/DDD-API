@@ -39,13 +39,13 @@ try
         if($filtro == 'notfilterset') $filtro = '';
 
         //url base
-        $url_base="api.promo-zone.com.mx/v1/establecimientos";
+        $url_base="my-other-api/v1/establecimientos";
 
         //sin importar si recibi estado o categoria, o ambos(siempre uno de los 2)
         //tratar de obtener los datos de estos
         if(!empty($categoria)){
             $categoriaId=filter_var($categoria,FILTER_SANITIZE_NUMBER_INT);
-            $urlCategorias="api.promo-zone.com.mx/v1/categorias/$categoriaId";
+            $urlCategorias="my-other-api/v1/categorias/$categoriaId";
             $respCategorias=obtenerDatos($urlCategorias);
             //se supone que recibi un objeto
             if(!is_object($respCategorias)){
@@ -62,7 +62,7 @@ try
 
         if(!empty($estado)){
             $estadoId=filter_var($estado,FILTER_SANITIZE_NUMBER_INT);
-            $urlEstado="api.promo-zone.com.mx/v1/estados/$estadoId";
+            $urlEstado= "my-other-api/v1/estados/$estadoId";
             $respEstado=obtenerDatos($urlEstado);
             //var_dump($respEstado);
             if(!is_object($respEstado)){
@@ -158,7 +158,7 @@ function ordenardatos($datos){
         $respuesta['promocion'][]=$temp;
     }
     $respuesta['size']=count($respuesta['promocion']);
-	$respuesta['url_banner'] = 'http://www.tusprivilegios.com/RETAIL/AE/RESTFUL/Perfil/imagenes/banner-pz/promozone-ae-banner.png';
+	$respuesta['url_banner'] = 'http://www.mydomain.com/imagenes/banner-pz/ae-banner.png';
     return $respuesta;
 }
 
