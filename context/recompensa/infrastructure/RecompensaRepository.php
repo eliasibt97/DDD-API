@@ -22,7 +22,7 @@ class RecompensaRepository implements RecompensaRepositoryInterface
 	public function getRecompensas( $agenciaId, $isVitrina )
 	{		
 		$query = $this->db->db_connect->prepare("SELECT r.IdRecompensaVitrina AS id, r.DescripcionRecompensaVitrina, r.Valor, r.PuntosAsociados,
-			CONCAT('https://www.misrecompensas.com.mx/MOC/AGENCIA/agregar/imgrecvitrina/',ri.Imagen) as imagen
+			CONCAT('https://www.midominio.com.mx/images/imgrecvitrina/',ri.Imagen) as imagen
 			FROM recompensavitrina r
 			INNER JOIN recompensaimagen ri ON r.IdRecompensaVitrina = ri.IdRecompensa
 			WHERE r.IdAgencia = $agenciaId AND ri.DeVitrina = $isVitrina");
